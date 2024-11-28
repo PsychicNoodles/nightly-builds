@@ -52,7 +52,8 @@ jobs:
 
       - name: Choose any SM7150 device in pmbootstrap to build kernel
         run: |
-          cp xiaomi-davinci.cfg ~/.config/pmbootstrap.cfg
+          cp xiaomi-sweet.cfg ~/.config/pmbootstrap.cfg
+          pmbootstrap config
 
       - name: Compile kernel with envkernel
         run: |
