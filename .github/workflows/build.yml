@@ -42,7 +42,8 @@ jobs:
       - name: Check kernel branch
         if: matrix.version == 'default'
         run: |
-          DEFAULT_BRANCH=$(curl -s  https://api.github.com/repos/sm7150-mainline/linux | jq -r '.default_branch')
+          # DEFAULT_BRANCH=$(curl -s  https://api.github.com/repos/sm7150-mainline/linux | jq -r '.default_branch')
+          DEFAULT_BRANCH=v6.10.3
           echo "Default branch is $DEFAULT_BRANCH"
           echo "KERNEL_BRANCH=$DEFAULT_BRANCH" >> $GITHUB_ENV
 
