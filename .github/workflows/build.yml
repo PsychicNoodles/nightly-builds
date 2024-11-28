@@ -154,3 +154,6 @@ jobs:
       #     name: xiaomi-toco-${{ env.KERNEL_BRANCH }}
       #     path: out/*-toco.img*
       #     retention-days: 7
+      - name: pmbootstrap log
+        if: ${{ failure() }}
+        run: cat /home/runner/.local/var/pmbootstrap/log.txt
