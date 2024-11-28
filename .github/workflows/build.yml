@@ -52,7 +52,7 @@ jobs:
 
       - name: Choose any SM7150 device in pmbootstrap to build kernel
         run: |
-          cp xiaomi-sweet.cfg ~/.config/pmbootstrap.cfg
+          cp xiaomi-sweet.cfg ~/.config/pmbootstrap_v3.cfg
           pmbootstrap config
 
       - name: Compile kernel with envkernel
@@ -106,7 +106,7 @@ jobs:
 
       - name: Build xiaomi-sweet
         run: |
-          cp xiaomi-sweet.cfg ~/.config/pmbootstrap.cfg
+          cp xiaomi-sweet.cfg ~/.config/pmbootstrap_v3.cfg
           pmbootstrap install --password 147147
           pmbootstrap export
           cp /tmp/postmarketOS-export/boot.img out/boot-xiaomi-sweet.img
